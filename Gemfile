@@ -18,7 +18,9 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro', '~> 1.0.0'
 gem 'devise', '~> 3.4.1'
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe_event'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

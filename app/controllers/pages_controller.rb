@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+  def pricing
+  end
+  def home
+  end
 end
