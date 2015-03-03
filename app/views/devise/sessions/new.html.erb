@@ -1,26 +1,55 @@
-<h2>Sign in</h2>
+<section id="register">
+  <div class="wide has-padding">
+        <div class="panel panel-default">
+          <div class="panel center">
+            <h3>Sign In</h3>
+          </div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, :autofocus => true, class: "form-control" %>
-  </div>
+    <div class="panel-body">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-  <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, class: "form-control" %>
-  </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-10 col-xs-12">
+              <%= f.label :email %>
+              <%= f.email_field :email, :autofocus => true, class: "form-control" %>
+            </div>
+          </div>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="form-group">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-10 col-xs-12">
+              <%= f.label :password %>
+              <%= f.password_field :password, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-10 col-xs-12">
+              
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-4">
+              <%= f.submit "Log In to Telos Lax", class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end -%>
 
-  <div class="form-group">
-    <%= f.submit "Sign in", class: "btn btn-primary" %>
+    <div class="panel-footer">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+</section>

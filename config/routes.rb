@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
  
-
+  resources :charges
   resources :lessons
 
  
@@ -26,7 +26,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
   get 'thanks' => 'pages#thanks'
-  root 'pages#home'
+  get 'home' => 'pages#home'
+  root 'lessons#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

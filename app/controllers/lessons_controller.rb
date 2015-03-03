@@ -92,7 +92,7 @@ class LessonsController < ApplicationController
         end
       else
         # User needs to be signed in first
-        redirect_to new_user_session_path, notice: "You must be logged in to access this section"
+        redirect_to home_path, notice: "You must be logged in to access this section"
       end
     end
 

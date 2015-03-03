@@ -1,7 +1,7 @@
 <% if current_user.extra_access == true %>
-  <p>Congratulations on your lifetime access to the Etsydemo course and the Video Library!</p> <p>Pick a plan below to access all other content on BaseRails.</p>
+  <p>Congratulations on your access to the Video Library!</p> <p>Pick a plan below to access all other content on Telos Lax.</p>
 <% elsif current_user.plan == nil %>
-  <p>Congratulations on your lifetime access to the Etsydemo course!</p> <p>Pick a plan below to access all additional content on BaseRails.</p>
+  <p>Last Step.</p> <p>Pick a plan below to access all additional content on Telos Lax.</p>
  <% end %>
 
 <%= form_for(:user, :url => update_both_path, :html => {id: "payment_form", :method => :put}) do |f| %>
